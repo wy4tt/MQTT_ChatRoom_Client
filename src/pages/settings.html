@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>HappyChat - Settings</title>
+
+    <!-- Load the page specific css file-->
+    <link rel="stylesheet" href="../style/basics.css" />
+    <link rel="stylesheet" href="../style/settings.css" />
+
+    <!-- Load up the fancy icon library-->
+    <script src="https://kit.fontawesome.com/fbc651d935.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <strong>
+            <i class="fa fa-chevron-left fa-2x left_side" id="backBtn"></i>
+        </strong>
+    </div>
+
+    <div class="page_view">
+        <strong>
+            <h1>Appearance</h1>
+            <hr>
+        </strong>
+        <br>
+
+        <div class="card_deck">
+            <div id="theme_light" class="card">
+                <h4>
+                    <b>
+                        Light &nbsp;
+                        <i id="light_active" class="fa fa-check"></i>
+                    </b>
+                </h4>
+            </div>
+
+            <div id="theme_dark" class="card">
+                <h4>
+                    <b>
+                        Dark &nbsp;
+                        <i id="dark_active" class="fa fa-check"></i>
+                    </b>
+                </h4>
+            </div>
+
+            <div id="theme_auto" class="card">
+                <h4>
+                    <b>
+                        Auto &nbsp;
+                        <i id="auto_active" class="fa fa-check"></i>
+                    </b>
+                </h4>
+            </div>
+        </div>
+        <br>
+
+        <!-- Notifications-->
+        <strong>
+            <h1>Notifications</h1>
+            <hr>
+        </strong>
+        <br>
+
+        <div class="card_deck">
+            <div id="theme_light" class="card">
+                <h4>
+                    <b>
+                        None &nbsp;
+                        <i id="light_active" class="fa fa-check"></i>
+                    </b>
+                </h4>
+            </div>
+
+            <div id="theme_dark" class="card">
+                <h4>
+                    <b>
+                        Status &nbsp;
+                        <i id="dark_active" class="fa fa-check"></i>
+                    </b>
+                </h4>
+            </div>
+
+            <div id="theme_auto" class="card">
+                <h4>
+                    <b>
+                        Message &nbsp;
+                        <i id="auto_active" class="fa fa-check"></i>
+                    </b>
+                </h4>
+            </div>
+        </div>
+        <br>
+
+        <!-- Default Logins -->
+        <strong>
+            <h1>Default Login Values</h1>
+            <hr>
+        </strong>
+        <br>
+        <div class="info">
+            <input id="hostVal" class="form-field" type="text" placeholder="Host" value="lundrigan.byu.edu" />
+        </div>
+        <br />
+        <div class="info">
+            <input id="portVal" class="form-field" type="text" placeholder="Port" value="1883" />
+        </div>
+        <br />
+        <div class="info">
+            <input id="clientIdVal" class="form-field" type="text" placeholder="ClientID" value="le0nh4rt"
+                onkeyup="autofilltitle()" />
+        </div>
+        <br />
+        <div class="info">
+            <input id="nameVal" class="form-field" type="text" placeholder="Name" value="le0nh4rt" />
+        </div>
+
+
+        <script src="../js/theme.js"></script>
+        <script src="../js/settings.js"></script>
+
+</body>
+
+
+<script>
+
+</script>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>HappyChat</title>
+
+  <!-- Load the page specific css files-->
+  <link rel="stylesheet" href="style/basics.css" />
+  <link rel="stylesheet" href="style/index.css" />
+
+  <!-- Load up the fancy icon library-->
+  <script src="https://kit.fontawesome.com/fbc651d935.js" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="navbar">
+    <strong>
+      <i class="fa fa-bars fa-2x left_side" id="sideBtn"></i>
+      <i class="fa fa-cog fa-2x right_side" id="settingsBtn"></i>
+      <i class="fas fa-link fa-2x right_side" id="disconnectBtn"></i>
+      <i class="fas fa-unlink fa-2x right_side" id="connectBtn"></i>
+    </strong>
+  </div>
+
+  <div class="page_view">
+
+    <div class="split left">
+
+      <div class="onlineBoard">
+        <ul id="onlineList">
+        </ul>
+      </div>
+    </div>
+
+    <div class="split right">
+
+      <div id="messageBoard" class="messageBoard">
+        <ul id="messagesList">
+        </ul>
+      </div>
+
+      <div class="footer">
+        <input id="messageHolder" />
+        <i class="fa fa-paper-plane fa-2x right_side" id="sendBtn"></i>
+      </div>
+    </div>
+
+    <!-- The Connection Modal -->
+    <div id="myModal" class="modal centered">
+      <div class="connect_bubble">
+        <div class="info">
+          <input id="hostVal" class="form-field" type="text" placeholder="Host" value="lundrigan.byu.edu" />
+        </div>
+        <br />
+        <div class="info">
+          <input id="portVal" class="form-field" type="text" placeholder="Port" value="1883" />
+        </div>
+        <br />
+        <div class="info">
+          <input id="clientIdVal" class="form-field" type="text" placeholder="ClientID" value="le0nh4rt"
+            onkeyup="autofilltitle()" />
+        </div>
+        <br />
+        <div class="info">
+          <input id="nameVal" class="form-field" type="text" placeholder="Name" value="le0nh4rt" />
+        </div>
+        <br />
+        <button id="modalConnectBtn">Connect</button>
+        <button id="modalCloseBtn">Close</button>
+      </div>
+    </div>
+
+
+    <script src="js/theme.js"></script>
+    <script src="js/index.js"></script>
+  </div>
+</body>
+
+</html>
