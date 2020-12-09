@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>LundyChat</title>
+  <!-- Load the page specific css files-->
+  <link rel="stylesheet" href="../css/basics.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/settings.css" />
+  <!-- Load up the fancy icon library-->
+  <script src="https://kit.fontawesome.com/fbc651d935.js" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- This is the top navbar-->
+  <div class="navbar">
+    <strong>
+      <i class="fa fa-bars fa-2x left_side" id="sideBtn"></i>
+      <i class="fa fa-cog fa-2x right_side" id="settingsBtn"></i>
+      <i class="fas fa-link fa-2x right_side" id="disconnectBtn"></i>
+      <i class="fas fa-unlink fa-2x right_side" id="connectBtn"></i>
+    </strong>
+  </div>
+
+  <!-- This has holds the main visble contents of the page-->
+  <div class="page_view">
+
+    <!-- The left side of the page -->
+    <div class="split left">
+      <!-- This is for the list of online and offline users-->
+      <div id="onlineBoard" class="onlineBoard">
+        <!-- Start with an empty list-->
+        <ul id="onlineList">
+        </ul>
+      </div>
+    </div>
+
+    <!-- The right side of the page -->
+    <div class="split right">
+      <!-- This is for the messages view-->
+      <div id="messageBoard" class="messageBoard">
+        <ul id="messagesList">
+        </ul>
+      </div>
+      <!-- This is for the message input field-->
+      <div class="footer">
+        <input id="messageHolder" />
+        <i class="fa fa-paper-plane fa-2x right_side" id="sendBtn"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Connection Modal -->
+  <div id="connectModal" class="modal centered cModal">
+    <div class="connect_bubble">
+      <div class="info">
+        <input id="hostVal" class="form-field" type="text" placeholder="Host" value="localhost" />
+      </div>
+      <br />
+      <div class="info">
+        <input id="portVal" class="form-field" type="text" placeholder="Port" value="1883" />
+      </div>
+      <br />
+      <div class="info">
+        <input id="netIdVal" class="form-field" type="text" placeholder="NetID" value="" />
+      </div>
+      <br />
+      <div class="info">
+        <input id="nameVal" class="form-field" type="text" placeholder="Name" value="" />
+      </div>
+      <br />
+      <button id="modalConnectBtn">Connect</button>
+      <button id="modalCloseBtn">Close</button>
+    </div>
+  </div>
+
+  <div id="settingsModal" class="modal sModal">
+    <!-- This is the top navbar-->
+    <div class="navbar">
+      <strong>
+        <i class="fa fa-chevron-left fa-2x left_side" id="backBtn"></i>
+      </strong>
+    </div>
+
+    <br><br>
+    <br><br>
+
+    <!-- This has holds the main visble contents of the page-->
+    <div class="page_view">
+      <br>
+      <!-- Labeler for the appearance section -->
+      <strong>
+        <h1>Appearance</h1>
+        <hr>
+      </strong>
+      <div class="card_deck">
+        <div id="theme_light" class="card">
+          <h4><b>
+              Light &nbsp;
+              <i id="light_active" class="fa fa-check"></i>
+            </b></h4>
+        </div>
+
+        <div id="theme_dark" class="card">
+          <h4><b>
+              Dark &nbsp;
+              <i id="dark_active" class="fa fa-check"></i>
+            </b></h4>
+        </div>
+
+        <div id="theme_auto" class="card">
+          <h4><b>
+              Auto &nbsp;
+              <i id="auto_active" class="fa fa-check"></i>
+            </b></h4>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <!-- Labeler for the notifications section -->
+      <strong>
+        <h1>Notifications</h1>
+        <hr>
+      </strong>
+      <div class="card_deck">
+        <div id="notify_none" class="card">
+          <h4><b>
+              None &nbsp;
+              <i id="none_active" class="fa fa-check"></i>
+            </b></h4>
+        </div>
+
+        <div id="notify_status" class="card">
+          <h4><b>
+              Statuses &nbsp;
+              <i id="status_active" class="fa fa-check"></i>
+            </b></h4>
+        </div>
+
+        <div id="notify_message" class="card">
+          <h4><b>
+              Messages &nbsp;
+              <i id="message_active" class="fa fa-check"></i>
+            </b></h4>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <!-- Labeler for the default values section -->
+      <!-- <strong><h1>Default Connect Values</h1><hr></strong> -->
+    </div>
+  </div>
+
+
+  <!-- The JS page for the MQTT things -->
+  <script src="../js/chat.js"></script>
+  <!-- The JS page for the theme application -->
+  <script src="../js/theme.js"></script>
+  <!-- The JS pages for the page specific things -->
+  <script src="../js/index.js"></script>
+  <script src="../js/settings.js"></script>
+
+</body>
+</html>
