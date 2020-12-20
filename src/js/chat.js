@@ -47,7 +47,7 @@ function connect(config) {
 
     client.on("error", (err) => {
         console.log("Connection error: ", err);
-        client.end();
+        // client.end();
         checkConnStatus();
     });
 
